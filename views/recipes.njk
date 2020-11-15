@@ -1,0 +1,15 @@
+{% extends "layout.njk" %}
+{% block content %}
+<div class="recipes">
+           {% for times in items %}
+            <div id="card">
+                <a href="/recipehome/{{loop.index0}}"><img src="{{times.image}}" alt="{{times.title}}"></a>
+                
+                <h2>{{times.title}}</h2>
+                <span>{{times.author}}</span>
+            </div>
+        {% endfor %}
+
+
+</div>
+{% endblock content %}

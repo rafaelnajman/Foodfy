@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+{% block content %}
+<div class="card-alone">
+                <img src="{{items.image}}" alt="Image">
+                <h1 style = "font-size:3.2rem">{{items.title}}</h1>
+                <span>{{items.author}}</span>
+                <h1>Ingredientes</h1>
+                <ul></ul>
+                
+                {% for times in items.ingredients %}
+                 <li>{{items.ingredients[loop.index0]}}</li>
+                {% endfor %}
+                <div class = "toggle">
+                <h1>Preparacao</h1>
+                <button>Fechar</button>
+                </div>
+                <div class="preparation">
+                {% for times in items.preparation %}
+                <p>{{items.preparation[loop.index0]}}<br> </p>
+                {% endfor %}
+                </div>
+                <div class="toggle2">
+                <h1>Informacao</h1>
+                <button>Fechar</button>
+                </div>
+                <div class="information">
+                <p>{{items.information}}</p>
+                </div>
+</div>
+{% endblock content %}

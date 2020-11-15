@@ -1,0 +1,44 @@
+{% extends "layout.njk" %}
+
+    {% block head %}
+    <link rel="stylesheet" href="style1.css">
+    {% endblock head %}
+</div>
+   
+    {% block content %}
+         
+        <section class="intro" >
+            <div id="intro">
+            <h1 style="font-size: 3.2rem;margin: 0;" >As melhores receitas</h1>
+            <p>Aprenda a construir os melhores pratos
+                com receitas criadas por profissionais
+                do mundo inteiro.</p>
+            </div>
+            
+            <div id="chef">
+                <img src="assets/chef.png" alt="chef">
+
+            </div>
+        </section>
+        <h1 >Mais acessados</h1>
+
+        <div class="cards">
+        {% for times in items %}
+            <div id="card">
+                <a href="/recipehome/{{loop.index0}}"><img src="{{times.image}}" alt="{{times.title}}"></a>
+                
+                <h2>{{times.title}}</h2>
+                <span>{{times.author}}</span>
+            </div>
+        {% endfor %}
+        
+
+        </div>
+    
+    
+        
+ {% endblock content %}
+ <script>
+     const card = document.querySelector('#card')
+ </script>
+</html>
