@@ -3,4 +3,4 @@
 
  I used Nunjucks to do the dinamic part, all recipes can be edited in data.js file.
  
-  To start the server :`yarn start` at terminal and is going to open a local server at port 5000.Press at browser http://localhost:5000
+  To start the server :`yarn start` at terminal and it will open a local server at port 5000.http://localhost:5000 at browser to open the website
